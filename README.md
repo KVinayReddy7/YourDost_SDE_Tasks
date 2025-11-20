@@ -22,6 +22,8 @@ java Main
 
 ## Todo App(Backend)
 
+Use https://backend-basic-ui.onrender.com/ for basic UI for testing the deployed backend.
+
 A basic todo application with Node.js backend and vanilla JS frontend.
 
 **Setup:**
@@ -30,8 +32,6 @@ cd backend
 npm install
 npm start
 ```
-
-Then open `index.html` in your browser.
 
 **API Endpoints:**
 - `GET /todos` - Get all todos
