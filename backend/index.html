@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo App</h1>
+            <p class="subtitle">Simple CRUD Application</p>
+        </header>
+
+        <div class="api-status">
+            <span id="apiStatus" class="status-indicator">●</span>
+            <span id="apiStatusText">Connecting to API...</span>
+        </div>
+
+        <!-- Add Todo Form -->
+        <div class="add-todo-section">
+            <h2>Add New Todo</h2>
+            <form id="addTodoForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="todoTitle" 
+                        placeholder="Enter todo title *" 
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <textarea 
+                        id="todoDescription" 
+                        placeholder="Enter description (optional)" 
+                        rows="3"
+                    ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>+</span> Add Todo
+                </button>
+            </form>
+        </div>
+
+        <!-- Filter Options -->
+        <div class="filter-section">
+            <h2>Todos List</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <!-- Todos List -->
+        <div id="todosContainer" class="todos-container">
+            <div class="loading">Loading todos...</div>
+        </div>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Edit Todo</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <form id="editTodoForm">
+                    <input type="hidden" id="editTodoId">
+                    <div class="form-group">
+                        <label for="editTodoTitle">Title *</label>
+                        <input 
+                            type="text" 
+                            id="editTodoTitle" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="editTodoDescription">Description</label>
+                        <textarea 
+                            id="editTodoDescription" 
+                            rows="3"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="editTodoCompleted">
+                            <span>Mark as completed</span>
+                        </label>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

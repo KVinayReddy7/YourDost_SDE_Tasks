@@ -1,0 +1,20 @@
+{
+  "name": "todo-crud-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack Todo CRUD application with Node.js backend and vanilla JS frontend",
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "backend": "cd backend && node server.js",
+    "install-backend": "cd backend && npm install",
+    "test-api": "curl http://localhost:3000/todos"
+  },
+  "keywords": [
+    "todo",
+    "crud",
+    "rest-api",
+    "express",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "ISC"
+}

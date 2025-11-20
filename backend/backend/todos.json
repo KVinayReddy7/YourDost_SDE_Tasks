@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Watering plants",
+    "description": "at 4pm tomorrow water the plants in the garden",
+    "completed": true,
+    "createdAt": "2025-11-20T12:42:55.737Z",
+    "updatedAt": "2025-11-20T12:43:04.330Z"
+  }
+]
